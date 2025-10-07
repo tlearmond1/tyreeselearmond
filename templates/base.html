@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tyreese Learmond</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tyreese Learmond - Incoming law student passionate about law, governance, education, business, and software development." />
+    <meta name="keywords" content="Tyreese Learmond, law student, governance, education, business, software development, portfolio, The Learmond Corporation, Learmond, Corporation, Tyreese, Learmond, Source, Fintech, CEO, Startup, Founder, Source Incorporated, Resume, Lawyer, Henry Foster Distinguish Scholar, Scholar, University of North Florida, University of Nebraska-Lincoln College of Law, University of Nebraska, Political Science, Philosophy, Kingston College High School" />
+    <meta name="author" content="Tyreese Learmond" />
+    <meta property="og:title" content="Tyreese Learmond" />
+    <meta property="og:site_name" content="Tyreese Learmond">
+    <meta property="og:description" content="Explore Tyreese Learmond's official website showcasing projects, resume, and contact information." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.url_root }}" />
+    <meta property="og:image" content="{{ url_for('static', filename='assets/TyreeseLearmondLogo2-nbckgrd.png', _external=True) }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tyreese Learmond" />
+    <meta name="twitter:description" content="Explore Tyreese Learmond's official website showcasing projects, resume, and contact information." />
+    <meta name="twitter:image" content="{{ url_for('static', filename='assets/TyreeseLearmondLogo2-nbckgrd.png', _external=True) }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon_io/favico.ico') }}" sizes="48x48">
+    <link rel="canonical" href="https://www.tyreeselearmond.com/">
+    <link rel="apple-touch-icon"  sizes="180x180" href="{{ url_for('static', filename='assets/favicon_io/apple-touch-icon.png') }}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Website",
+  "url": "https://tyreeselearmond.com",
+  "logo": "https://tyreeselearmond.com/static/assets/favicon_io/apple-touch-icon.png",
+  "name": "Tyreese Learmond"
+}
+</script>
+<body>
+    <header>
+        {% if request.endpoint != 'home' %}
+        <div class="branding">
+            <img src="{{ url_for('static', filename='assets/TyreeseLearmondLogo2-nbckgrd.png') }}" alt="Tyreese Learmond" />
+            <h1>Tyreese Learmond</h1>
+        </div>
+        {% else %}
+            <h1>Tyreese Learmond</h1>
+        {% endif %}
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('resume') }}">Resume</a></li>
+                <li><a href="{{ url_for('links') }}">Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-wrapper" style="display: flex; gap: 2rem;">
+          <div style="flex: 1;">
+            {% block content %}{% endblock %}
+          </div>
+          <aside class="socials-box" style="width: 200px; flex-shrink: 0;">
+            <h3>Connect with Me</h3>
+              <a href="{{ url_for('links') }}" target="_blank">
+                  <img src="{{ url_for('static', filename='assets/tyreeselearmond_links_qr.png') }}" alt="Tyreese Learmond Links QR Code" style="width: 100%; height: auto; margin-right: 50px;" />
+              </a>
+          </aside>
+        </section>
+    </main>
+    <footer>
+    <div class="affiliates-container">
+        <h4 style="margin-top: 0.5rem;">Affiliated Entities:</h4>
+        <ul style="list-style: none">
+            <li><a href="https://www.thelearmondcorporation.com" target="_blank">The Learmond Corporation</a></li>
+            <li><a href="https://learnmondfinancial.com" target="_blank">Learmond Financial</a></li>
+            <li><a href="https://source.thelearmondcorporation.com" target="_blank">Source</a></li>
+            <li><a href="https://x.com/tyreeselearmond" target="_blank">X</a></li>
+            <li><a href="https://facebook.com/tyreeselearmond1" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com/tyreeselearmond" target="_blank">Instagram</a></li>
+        </ul>
+    </div>
+        <p>© 2025 The Learmond Corporation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

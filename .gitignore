@@ -1,0 +1,28 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Flutter / iOS
+build/
+ios/Pods/
+ios/Flutter/Flutter.framework
+.DS_Store
+
+tyreeselearmond/
+
+
+# Node / JS
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Misc
+*.log
+*.swp
